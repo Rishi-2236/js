@@ -11,7 +11,11 @@ console.log(typeof "rishi");
 console.log(typeof null);// o/p-- object
 console.log(typeof undefined);//o/p--undefined
 
+// number => 2 to power 53
+// bigint
+// string => ""
+// boolean => true/false
+// null => standalone value
+// undefined => 
+// symbol => unique
 
-//bigint
-//string=""
-//
