@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+
+<script>
+    //add new element
+    function addlanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")//dupplicate a line shitft+alt+down arrow
+    addlanguage("java")
+    //OPTIMAL APPROACH
+    function addoptilanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilanguage("golang")
+
+    //EDIT VALUES
+    const secondLang=document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML="mojo"
+
+    const newli=document.createElement('li')
+    newli.textContent="c++" 
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang=document.querySelector("li:nth-child(1)")
+    firstLang.innerHTML="nodejs"
+    //outer html change : write full html 
+    firstLang.outerHTML='<li>typescript</li>'
+
+    //remove
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+
+</html>
