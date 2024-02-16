@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="Stop"> Stop</button>
+    <script>
+        setTimeout(function () {
+            console.log("Rishi");
+        },2000)
+
+        const sayName=function () {
+            console.log("rishi");
+        }
+        const changetext=function () {
+            document.querySelector('h1')
+            .innerHTML="Rishi's code"
+        }
+        //or
+        // setTimeout(function () {
+        //     document.querySelector('h1')
+        //     .innerHTML="Rishi's code"
+        // },2000)
+        setTimeout(sayName,5000)
+        const changeme= setTimeout(changetext,7000)
+           // clearTimeout(changeme) we will add this in a event
+           document.querySelector('#Stop').addEventListener('click',
+           function(){
+            clearTimeout(changeme)
+            console.log("STOPPED");
+           })
+    </script>
+</body>
+</html>
